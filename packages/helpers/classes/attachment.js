@@ -6,8 +6,8 @@
 const toCamelCase = require('../helpers/to-camel-case');
 const toSnakeCase = require('../helpers/to-snake-case');
 const deepClone = require('../helpers/deep-clone');
-const fs = require('fs');
-const path = require('path');
+const FileSystem = require('expo-file-system');
+const path = FileSystem.documentDirectory;
 
 /**
  * Attachment class
@@ -52,7 +52,7 @@ class Attachment {
 
     if ((typeof content !== 'undefined') && (typeof filePath !== 'undefined')) {
       throw new Error(
-        "The props 'content' and 'filePath' cannot be used together."
+        'The props \'content\' and \'filePath\' cannot be used together.'
       );
     }
 
@@ -68,7 +68,7 @@ class Attachment {
    * Read a file and return its content as base64
    */
   readFile(filePath) {
-    return fs.readFileSync(path.resolve(filePath));
+    return FileSystem.readFileSync(path.resolve(filePath));
   }
 
   /**
