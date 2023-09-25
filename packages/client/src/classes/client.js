@@ -9,7 +9,7 @@ const {
     Response,
     ResponseError,
   },
-} = require('@sendgrid/helpers');
+} = require('sendgrid-react-native/packages/helpers');
 
 const API_KEY_PREFIX = 'SG.';
 const SENDGRID_BASE_URL = 'https://api.sendgrid.com/';

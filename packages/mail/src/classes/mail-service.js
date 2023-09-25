@@ -3,8 +3,8 @@
 /**
  * Dependencies
  */
-const {Client} = require('@sendgrid/client');
-const {classes: {Mail}} = require('@sendgrid/helpers');
+const {Client} = require('sendgrid-react-native/packages/client');
+const {classes: {Mail}} = require('sendgrid-react-native/packages/helpers');
 
 /**
  * Mail service class
